@@ -120,8 +120,8 @@ def get_progress_bar_string(pct):
         pct = float(pct.strip('%'))
     p = min(max(pct, 0), 100)
     cFull = int(p // 10)
-    p_str = '⬢' * cFull
-    p_str += '⬡' * (10 - cFull)
+    p_str = '◔' * cFull
+    p_str += '●' * (10 - cFull)
     return f"{p_str}"
 
 
@@ -217,7 +217,7 @@ def get_readable_message():
         buttons.ibutton(f"{PAGE_NO}/{PAGES}", "status ref")
         buttons.ibutton("⫸", "status nex")
         button = buttons.build_menu(3)
-    msg += "_____________________________"
+    msg += "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
     msg += f"\n<b>DISK</b>: <code>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}</code>"
     msg += f" | <b>UPTM</b>: <code>{get_readable_time(time() - botStartTime)}</code>"
     msg += f"\n<b>DL</b>: <code>{get_readable_file_size(dl_speed)}/s</code>"

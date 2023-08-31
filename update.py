@@ -42,7 +42,7 @@ if DATABASE_URL:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://github.com/NadifMasamba/CMT-Hero'
+    UPSTREAM_REPO = 'https://gitlab.com/Dawn-India/Z-Mirror'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
@@ -65,7 +65,7 @@ if UPSTREAM_REPO:
         log_info('Successfully updated with latest commit.')
         log_info(f'Repo in use: {UPSTREAM_REPO}')
         log_info(f'Branch in use: {UPSTREAM_BRANCH}')
-        log_info('Thanks For Using PeaMasamba_Mirror')
+        log_info('Thanks For Using Z_Mirror')
     else:
         log_error('Something went wrong while updating.')
         log_info('Check if entered UPSTREAM_REPO is valid or not!')

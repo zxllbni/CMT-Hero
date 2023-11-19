@@ -1144,7 +1144,7 @@ def easyupload(url):
 
 def filelions(url):
     if not config_dict['FILELION_API']:
-        raise DirectDownloadLinkException('ERROR: FILELION_API is not provided get it from https://filelions.com/?op=my_account')
+        raise DirectDownloadLinkException('ERROR: FILELION_API is not provided get it from https://filelions.co/?op=my_account')
     file_code = url.split('/')[-1]
     quality = ''
     if bool(file_code.endswith(('_o', '_h', '_n', '_l'))):
@@ -1153,7 +1153,7 @@ def filelions(url):
         file_code = spited_file_code[0]
     with Session() as session:
         try:
-            _res = session.get('https://api.filelions.com/api/file/direct_link', params={'key': config_dict['FILELION_API'], 'file_code': file_code, 'hls': '1'}).json()
+            _res = session.get('https://api.filelions.co/api/file/direct_link', params={'key': config_dict['FILELION_API'], 'file_code': file_code, 'hls': '1'}).json()
         except Exception as e:
             raise DirectDownloadLinkException(f'ERROR: {e.__class__.__name__}')
     if _res['status'] != 200:

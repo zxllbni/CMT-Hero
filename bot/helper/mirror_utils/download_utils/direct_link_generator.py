@@ -102,7 +102,7 @@ def direct_link_generator(link):
         return fembed(link)
     elif any(x in domain for x in ['sbembed.com', 'watchsb.com', 'streamsb.net', 'sbplay.org']):
         return sbembed(link)
-    elif any(x in domain for x in ['filelions.com', 'filelions.live', 'filelions.to']):
+    elif any(x in domain for x in ['filelions.co', 'filelions.site', 'filelions.live', 'filelions.to', 'filelions.online']):
         return filelions(link)
     elif is_share_link(link):
         if 'gdtot' in domain:

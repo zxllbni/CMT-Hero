@@ -7,5 +7,6 @@ Ini adalah Bot Telegram yang ditulis dalam bahasa Python untuk memirror file di 
 * `HEROKU_APP_NAME`
 * `CONFIG_FILE_URL`
 
+Saat anda mendeploy Heroku silahkan pilih Branch cmt_deploy
 _______________________________
 Bagi yang tahu, tinggal workflows aja ke heroku, kelar deh.

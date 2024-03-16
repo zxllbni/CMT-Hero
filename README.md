@@ -4,7 +4,7 @@
 
 [![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=@nadifmasamba)](https://github.com/NadifMasamba/CMT-Hero)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nadifmasamba)](https://github.com/NadifMasamba/CMT-Hero))
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nadifmasamba)](https://github.com/NadifMasamba/CMT-Hero)
 
 
 <h1 align="center">

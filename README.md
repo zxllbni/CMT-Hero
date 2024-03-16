@@ -1,3 +1,5 @@
+[![hi](https://github-readme-stats.vercel.app/api/pin/?username=NadifMasamba&repo=try&theme=react&border_color=61dafb&border_radius=10)](https://github.com/NadifMasamba/CMT-Hero)
+
 <h1 align="center">
   <b>𝑷𝒆𝒂 𝑴𝒂𝒔𝒂𝒎𝒃𝒂 𝑩𝒐𝒕</b>
 </h1>

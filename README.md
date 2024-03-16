@@ -1,4 +1,14 @@
-[![hi](https://github-readme-stats.vercel.app/api/pin/?username=NadifMasamba&repo=try&theme=react&border_color=61dafb&border_radius=10)](https://github.com/NadifMasamba/CMT-Hero)
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=NadifMasamba&show_icons=true&theme=dark"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=NadifMasamba&show_icons=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=NadifMasamba&show_icons=true" />
+</picture>
 
 <h1 align="center">
   <b>𝑷𝒆𝒂 𝑴𝒂𝒔𝒂𝒎𝒃𝒂 𝑩𝒐𝒕</b>

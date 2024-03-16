@@ -70,19 +70,24 @@ async def get_document_type(path):
         result = await cmd_exec(["ffprobe", "-hide_banner", "-loglevel", "error", "-print_format",
                                  "json", "-show_streams", path])
         if res := result[1]:
-            LOGGER.warning(f"Get Document Type: {res} - File: {path}")
+            if mime_type.startswith('video'):
+                is_video = True
     except Exception as e:
         LOGGER.error(f"Get Document Type: {e}. Mostly File not found! - File: {path}")
-        return is_video, is_audio, is_image
-    fields = eval(result[0]).get('streams')
-    if fields is None:
-        LOGGER.error(f"Get_document_type: {result}")
-        return is_video, is_audio, is_image
-    for stream in fields:
-        if stream.get('codec_type') == 'video':
+        if mime_type.startswith('video'):
             is_video = True
-        elif stream.get('codec_type') == 'audio':
-            is_audio = True
+        return is_video, is_audio, is_image
+    if result[0] and result[2] == 0:
+        fields = eval(result[0]).get('streams')
+        if fields is None:
+            LOGGER.error(f'get_document_type: {result}')
+            return is_video, is_audio, is_image
+        is_video = False
+        for stream in fields:
+            if stream.get('codec_type') == 'video':
+                is_video = True
+            elif stream.get('codec_type') == 'audio':
+                is_audio = True
     return is_video, is_audio, is_image
 
 
@@ -90,7 +95,7 @@ async def get_audio_thumb(audio_file):
     des_dir = "Thumbnails/"
     await makedirs(des_dir, exist_ok=True)
     des_dir = f"Thumbnails/{time()}.jpg"
-    cmd = ["render", "-hide_banner", "-loglevel", "error",
+    cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error",
            "-i", audio_file, "-an", "-vcodec", "copy", des_dir]
     _, err, code = await cmd_exec(cmd)
     if code != 0 or not await aiopath.exists(des_dir):
@@ -108,7 +113,7 @@ async def take_ss(video_file, duration):
     if duration == 0:
         duration = 3
     duration = duration // 2
-    cmd = ["render", "-hide_banner", "-loglevel", "error", "-ss", str(duration),
+    cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", str(duration),
            "-i", video_file, "-vf", "thumbnail", "-frames:v", "1", des_dir]
     _, err, code = await cmd_exec(cmd)
     if code != 0 or not await aiopath.exists(des_dir):
@@ -136,7 +141,7 @@ async def split_file(path, size, dirpath, split_size, listener, start_time=0, i=
         split_size -= 5000000
         while i <= parts or start_time < duration - 4:
             out_path = f"{base_name}.part{i:03}{extension}"
-            cmd = ["render", "-hide_banner", "-loglevel", "error", "-ss", str(start_time), "-i", path,
+            cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", str(start_time), "-i", path,
                    "-fs", str(split_size), "-map", "0", "-map_chapters", "-1", "-async", "1", "-strict",
                    "-2", "-c", "copy", out_path]
             if not multi_streams:

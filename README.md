@@ -2,7 +2,6 @@
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NadifMasamba&repo=CMT-Hero)](https://github.com/NadifMasamba/CMT-Hero)
 
-[![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=@nadifmasamba)](https://github.com/NadifMasamba/CMT-Hero)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nadifmasamba)](https://github.com/NadifMasamba/CMT-Hero)
 

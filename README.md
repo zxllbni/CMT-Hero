@@ -1,3 +1,11 @@
+<h1 align="left">
+    <a target="_blank">
+        CMT Hero Bot
+        <img src="http://www.randomnoun.com/wpf/shell32-avi/tshell32_160.gif" width="272" height="60">
+    </a>
+</h1>
+
+
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=NadifMasamba&show_icons=true&theme=radical)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NadifMasamba&repo=CMT-Hero)](https://github.com/NadifMasamba/CMT-Hero)

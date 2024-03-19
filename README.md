@@ -49,6 +49,9 @@ This will be your CONFIG_FILE_URL. Refer to below images for clarity.
 </a>
 </details>
 
+
+
+---
 Saat anda mendeploy Heroku (Run workflow) di Action, silahkan pilih Branch cmt_deploy
 _______________________________
 Bagi yang tahu, tinggal workflows aja ke heroku, kelar deh.

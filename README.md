@@ -41,26 +41,24 @@ Bagi yang tahu, tinggal workflows aja ke heroku, kelar deh.
 Use these commands:
 <br>
 <br>
-• Build Command: <code>pip3 install -U -r requirements.txt</code>
+• HEROKU_EMAIL
 <br>
 <br>
-• Start Command: <code>python3 bot.py</code>
+• HEROKU_API_KEY
 <br>
 <br>
-Go to https://uptimerobot.com/ and add a monitor to keep your bot alive.
+• HEROKU_APP_NAME
 <br>
 <br>
-Use these settings when adding a monitor:</b>
+• CONFIG_FILE_URL
 <br>
 <br>
-<img src="https://telegra.ph/file/a79a156e44f43c9833b50.jpg" alt="render template">
-<br>
-<br>
-<b>Click on the below button to deploy directly to render ↓</b>
-<br>
-<br>
-<a href="https://render.com/deploy?repo=https://github.com/HarshalPurohitEdits/TheMovieProviderBot/tree/main">
-<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
+opy This in any text editor.Remove 
+the REMOVE_THIS_LINE=True line and fill the variables. 
+For details about config you can see Here. 
+Go to https://gist.github.com and paste your config data. 
+Rename the file to config.env then create secret gist. Click on Raw, copy the link. 
+This will be your CONFIG_FILE_URL. Refer to below images for clarity. 
 </a>
 </details>
 

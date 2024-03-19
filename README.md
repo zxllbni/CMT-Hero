@@ -22,23 +22,10 @@ Ini adalah Bot Telegram yang ditulis dalam bahasa Python untuk memirror file di 
 
 ## Deploy on Heroku
 
-* `HEROKU_EMAIL`
-* `HEROKU_API_KEY`
-* `HEROKU_APP_NAME`
-* `CONFIG_FILE_URL`
-
-Saat anda mendeploy Heroku (Run workflow) di Action, silahkan pilih Branch cmt_deploy
-_______________________________
-Bagi yang tahu, tinggal workflows aja ke heroku, kelar deh.
-
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝑊𝑒𝑙𝑐𝑜𝑚𝑒!;Repo+B𝑦+Pea+Masamba;𝐴+𝑠𝑖𝑚𝑝𝑙𝑒+𝑎𝑛𝑑+𝑝𝑜𝑤𝑒𝑟𝑓𝑢𝑙+𝐵𝑜𝑡!;Speed+Good+Support+Leech+4𝐺𝐵)](https://github.com/NadifMasamba/CMT-Hero)
-
-
-<details><summary>Deploy To Render</summary>
+<details><summary><b></b>Deploy</b></summary>
 <br>
 <b>
-Use these commands:
+Isilah ini di Actions secrets:
 <br>
 <br>
 • HEROKU_EMAIL
@@ -53,7 +40,7 @@ Use these commands:
 • CONFIG_FILE_URL
 <br>
 <br>
-opy This in any text editor.Remove 
+Copy This in any text editor.Remove 
 the REMOVE_THIS_LINE=True line and fill the variables. 
 For details about config you can see Here. 
 Go to https://gist.github.com and paste your config data. 
@@ -61,5 +48,15 @@ Rename the file to config.env then create secret gist. Click on Raw, copy the li
 This will be your CONFIG_FILE_URL. Refer to below images for clarity. 
 </a>
 </details>
+
+Saat anda mendeploy Heroku (Run workflow) di Action, silahkan pilih Branch cmt_deploy
+_______________________________
+Bagi yang tahu, tinggal workflows aja ke heroku, kelar deh.
+
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝑊𝑒𝑙𝑐𝑜𝑚𝑒!;Repo+B𝑦+Pea+Masamba;𝐴+𝑠𝑖𝑚𝑝𝑙𝑒+𝑎𝑛𝑑+𝑝𝑜𝑤𝑒𝑟𝑓𝑢𝑙+𝐵𝑜𝑡!;Speed+Good+Support+Leech+4𝐺𝐵)](https://github.com/NadifMasamba/CMT-Hero)
+
+
+
 
 

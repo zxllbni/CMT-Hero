@@ -472,6 +472,7 @@ class MirrorLeechListener:
             if mime_type == "Folder":
                 msg += f'\n<code>Sub Folders     </code>: {folders}'
                 msg += f'\n<code>Files           </code>: {files}'
+                msg += f'\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:

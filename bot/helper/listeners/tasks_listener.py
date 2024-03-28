@@ -466,8 +466,7 @@ class MirrorLeechListener:
                 await start_from_queued()
                 return
         else:
-            msg += f'\n<code>Type            </code>: {mime_type}'
-            msg += f'\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n'
+            msg += f'\n<code>Type            </code>: {mime_type}'    
             if mime_type == "Folder":
                 msg += f'\n<code>Sub Folders     </code>: {folders}'
                 msg += f'\n<code>Files           </code>: {files}'
@@ -597,6 +596,7 @@ class MirrorLeechListener:
         msg = f"{self.tag} {escape(str(error))}"
         msg += f"\n<code>Elapsed </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<code>Upload  </code>: {self.extra_details['mode']}"
+        msg += f"\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n"
         tlmsg = await sendMessage(self.message, msg)
         if self.logMessage:
             await sendMessage(self.logMessage, msg)

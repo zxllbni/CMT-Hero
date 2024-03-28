@@ -404,11 +404,9 @@ class MirrorLeechListener:
         gmsg = f'Hey <b>{self.tag}</b>!\nYour job is done.'
         msg = f'\n\n<code>Size            </code>: {get_readable_file_size(size)}'
         msg += f"\n<code>Elapsed         </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<code>Upload          </code>: {self.extra_details['mode']}"
-        msg += f"\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n"
+        msg += f"\n<code>Upload          </code>: {self.extra_details['mode']}"       
         _msg = '' if rclonePath == '' else f'\n\n<code>Path            </code>: {rclonePath}'
-        msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'
-        msg_ = '\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n'
+        msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'        
         buttons = ButtonMaker()
         if self.isLeech:
             msg += f'\n<code>Total Files     </code>: {folders}\n'
@@ -472,7 +470,7 @@ class MirrorLeechListener:
             if mime_type == "Folder":
                 msg += f'\n<code>Sub Folders     </code>: {folders}'
                 msg += f'\n<code>Files           </code>: {files}'
-                msg += f'\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n'
+                msg += f'\n\nFile hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.\n'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:
@@ -598,8 +596,7 @@ class MirrorLeechListener:
                 self.sameDir.remove(self.uid)
         msg = f"{self.tag} {escape(str(error))}"
         msg += f"\n<code>Elapsed </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<code>Upload  </code>: {self.extra_details['mode']}"
-        msg += f"\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n"
+        msg += f"\n<code>Upload  </code>: {self.extra_details['mode']}"        
         tlmsg = await sendMessage(self.message, msg)
         if self.logMessage:
             await sendMessage(self.logMessage, msg)

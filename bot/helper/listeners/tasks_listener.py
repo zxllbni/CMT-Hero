@@ -467,7 +467,7 @@ class MirrorLeechListener:
                 return
         else:
             msg += f'\n<code>Type            </code>: {mime_type}'
-            msg += f"\n\n<b><blockquote><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code></blockquote>\n"
+            msg += f"\n\n<b><code>🙏 File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.<b></code>\n"
             if mime_type == "Folder":
                 msg += f'\n<code>Sub Folders     </code>: {folders}'
                 msg += f'\n<code>Files           </code>: {files}'

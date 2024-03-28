@@ -406,7 +406,7 @@ class MirrorLeechListener:
         msg += f"\n<code>Elapsed         </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<code>Upload          </code>: {self.extra_details['mode']}"       
         _msg = '' if rclonePath == '' else f'\n\n<code>Path            </code>: {rclonePath}'
-        msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'        
+        msg_ = '\n\n<b><i>File hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.</i></b>'        
         buttons = ButtonMaker()
         if self.isLeech:
             msg += f'\n<code>Total Files     </code>: {folders}\n'
@@ -469,8 +469,7 @@ class MirrorLeechListener:
             msg += f'\n<code>Type            </code>: {mime_type}'    
             if mime_type == "Folder":
                 msg += f'\n<code>Sub Folders     </code>: {folders}'
-                msg += f'\n<code>Files           </code>: {files}'
-                msg += f'\n\nFile hasil mirror kalian akan kami simpan sementara di drive kami, jadi silahkan download atau backup secepatnya ke drive kalian. Thanks.\n'
+                msg += f'\n<code>Files           </code>: {files}'                
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:
